@@ -1,0 +1,50 @@
+{
+    "name": "signifly/laravel-cancellation",
+    "description": "A laravel cancellation package.",
+    "keywords": [
+        "signifly",
+        "cancellation",
+        "laravel"
+    ],
+    "homepage": "https://github.com/signifly/laravel-cancellation",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Morten Poul Jensen",
+            "email": "mpj@signifly.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "illuminate/database": "^5.5",
+        "illuminate/support": "^5.5"
+    },
+    "require-dev": {
+        "orchestra/database": "^3.5",
+        "orchestra/testbench": "^3.5",
+        "phpunit/phpunit": "^6.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Signifly\\Cancellation\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Signifly\\Cancellation\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config":  {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Signifly\\Cancellation\\CancellationServiceProvider"
+            ]
+        }
+    }
+}
