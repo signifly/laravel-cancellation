@@ -2,8 +2,8 @@
 
 namespace Signifly\Cancellation;
 
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\ServiceProvider;
 
 class CancellationServiceProvider extends ServiceProvider
 {
@@ -18,8 +18,9 @@ class CancellationServiceProvider extends ServiceProvider
             __DIR__.'/../config/cancellation.php' => config_path('cancellation.php'),
         ], 'config');
 
-        $this->mergeConfigFrom(__DIR__ . '/../config/cancellation.php', 'cancellation');
+        $this->mergeConfigFrom(__DIR__.'/../config/cancellation.php', 'cancellation');
     }
+
     /**
      * Register the service provider.
      *
