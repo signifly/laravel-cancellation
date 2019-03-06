@@ -13,7 +13,7 @@ trait Cancellable
      */
     public static function bootCancellable()
     {
-        static::addGlobalScope(new CancellingScope);
+        static::addGlobalScope(new CancellingScope());
     }
 
     /**
@@ -42,7 +42,8 @@ trait Cancellable
     /**
      * Register a restoring model event with the dispatcher.
      *
-     * @param  \Closure|string  $callback
+     * @param \Closure|string $callback
+     *
      * @return void
      */
     public static function cancelling($callback)
@@ -53,7 +54,8 @@ trait Cancellable
     /**
      * Register a restoring model event with the dispatcher.
      *
-     * @param  \Closure|string  $callback
+     * @param \Closure|string $callback
+     *
      * @return void
      */
     public static function cancelled($callback)
@@ -68,7 +70,7 @@ trait Cancellable
      */
     public function isCancelled()
     {
-        return ! is_null($this->{$this->getCancelledAtColumn()});
+        return !is_null($this->{$this->getCancelledAtColumn()});
     }
 
     /**
@@ -97,7 +99,8 @@ trait Cancellable
     /**
      * Register a restoring model event with the dispatcher.
      *
-     * @param  \Closure|string  $callback
+     * @param \Closure|string $callback
+     *
      * @return void
      */
     public static function keeping($callback)
@@ -108,7 +111,8 @@ trait Cancellable
     /**
      * Register a restored model event with the dispatcher.
      *
-     * @param  \Closure|string  $callback
+     * @param \Closure|string $callback
+     *
      * @return void
      */
     public static function kept($callback)

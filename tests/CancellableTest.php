@@ -11,7 +11,7 @@ class CancellableTest extends TestCase
     use FindsOrders;
 
     /** @test */
-    function it_can_check_if_the_order_is_cancelled()
+    public function it_can_check_if_the_order_is_cancelled()
     {
         $order = $this->getRegularOrder();
 
@@ -25,7 +25,7 @@ class CancellableTest extends TestCase
     }
 
     /** @test */
-    function an_order_can_be_cancelled()
+    public function an_order_can_be_cancelled()
     {
         $order = $this->getRegularOrder();
 
@@ -37,7 +37,7 @@ class CancellableTest extends TestCase
     }
 
     /** @test */
-    function a_cancelled_order_can_be_kept()
+    public function a_cancelled_order_can_be_kept()
     {
         $cancelledOrder = $this->getCancelledOrder();
 
@@ -49,7 +49,7 @@ class CancellableTest extends TestCase
     }
 
     /** @test */
-    function cancelling_an_order_fires_expected_events()
+    public function cancelling_an_order_fires_expected_events()
     {
         Event::fake();
 
@@ -61,7 +61,7 @@ class CancellableTest extends TestCase
     }
 
     /** @test */
-    function keeping_an_order_fires_expected_events()
+    public function keeping_an_order_fires_expected_events()
     {
         Event::fake();
 
@@ -74,7 +74,7 @@ class CancellableTest extends TestCase
     }
 
     /** @test */
-    function cancelling_event_can_receive_a_callback()
+    public function cancelling_event_can_receive_a_callback()
     {
         $called = false;
 
@@ -91,7 +91,7 @@ class CancellableTest extends TestCase
     }
 
     /** @test */
-    function cancelled_event_can_receive_a_callback()
+    public function cancelled_event_can_receive_a_callback()
     {
         $order = $this->getRegularOrder();
         $total = $order->total;
@@ -108,7 +108,7 @@ class CancellableTest extends TestCase
     }
 
     /** @test */
-    function keeping_event_can_receive_a_callback()
+    public function keeping_event_can_receive_a_callback()
     {
         $called = false;
 
@@ -125,7 +125,7 @@ class CancellableTest extends TestCase
     }
 
     /** @test */
-    function kept_event_can_receive_a_callback()
+    public function kept_event_can_receive_a_callback()
     {
         $called = false;
 
