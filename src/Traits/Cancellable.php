@@ -19,7 +19,7 @@ trait Cancellable
     /**
      * Perform the actual cancel query on this model instance.
      *
-     * @return void
+     * @return bool
      */
     public function cancel()
     {
