@@ -35,11 +35,19 @@ $order->cancel();
 You can query cancelled entities:
 
 ```php
-$orders = Order::onlyCancelled()->get(); // returns all the cancelled orders
+$orders = Order::onlyCancelled()->get(); // returns all the cancelled entities
+$orders = Order::withCancelled()->get(); // includes cancelled entities
+$orders = Order::withoutCancelled()->get(); // excludes cancelled entities
 ```
 
-## Documentation
-Until further documentation is provided, please have a look at the tests.
+Other useful methods:
+
+```php
+$order->isCancelled(); // returns true or false
+$order->keep(); // keep a cancelled order
+
+Order::whereKey([1, 2, 3])->keep(); // keeps orders with ids: 1, 2, 3
+```
 
 ## Installation
 
