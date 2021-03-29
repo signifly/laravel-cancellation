@@ -1,7 +1,7 @@
 # Cancel models inside your Laravel app
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/signifly/laravel-cancellation.svg?style=flat-square)](https://packagist.org/packages/signifly/laravel-cancellation)
-[![Build Status](https://img.shields.io/travis/signifly/laravel-cancellation/master.svg?style=flat-square)](https://travis-ci.org/signifly/laravel-cancellation)
+![Tests](https://github.com/signifly/laravel-janitor/workflows/Tests/badge.svg)
 [![StyleCI](https://styleci.io/repos/119215413/shield?branch=master)](https://styleci.io/repos/119215413)
 [![Quality Score](https://img.shields.io/scrutinizer/g/signifly/laravel-cancellation.svg?style=flat-square)](https://scrutinizer-ci.com/g/signifly/laravel-cancellation)
 [![Total Downloads](https://img.shields.io/packagist/dt/signifly/laravel-cancellation.svg?style=flat-square)](https://packagist.org/packages/signifly/laravel-cancellation)
