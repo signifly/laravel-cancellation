@@ -70,7 +70,7 @@ trait Cancellable
      */
     public function isCancelled()
     {
-        return !is_null($this->{$this->getCancelledAtColumn()});
+        return ! is_null($this->{$this->getCancelledAtColumn()});
     }
 
     /**

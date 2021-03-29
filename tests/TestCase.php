@@ -74,7 +74,7 @@ abstract class TestCase extends Orchestra
         });
         $this->beforeApplicationDestroyed(function () use ($eventClassName) {
             $firedEvents = isset($this->firedEvents) ? $this->firedEvents : [];
-            if (!in_array($eventClassName, $firedEvents)) {
+            if (! in_array($eventClassName, $firedEvents)) {
                 throw new Exception("Event {$eventClassName} not fired");
             }
         });
